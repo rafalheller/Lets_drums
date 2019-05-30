@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', sans-serif;
+  background-image: url("./../images/stage2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #212121;
+  max-height: 100vh;
+  overflow: hidden;
+
+
+  .app {
+    color: red;
+    display: flex;
+
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.logo {
+  font-family: 'Special Elite', cursive;
+  font-size: 1.1rem;
+  color: white;
+  padding-left: 0.5rem;
+  padding-top: 2rem;
+  letter-spacing: 5px;
+  //height: 6vh;
+
+}
+
+#header {
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.drums {
+  position: relative;
+  width: 85%;
+
+  .button {
+    display: block;
+
+  }
+  .bonus {
+    text-align: center;
+    line-height: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    //border: 2px solid red;
+    color: #fff;
+    opacity: 0.5;
+    font-weight: bold;
+    //backgroundColor: 'transparent';
+
+    position: absolute;
+    left: 0;
+    top: -95px;
+
+  }
+  .boom {
+    position: absolute;
+    background-image: url("./../images/acdc.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 51%;
+    height: 200px;
+    //top:0;
+    //left:56%;
+    z-index: 99;
+  }
+
+}
+
+#header {
+  .button {
+
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: lightgrey;
+    border: 2px solid lightgrey;
+    background-color: #212121;
+    display: block;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: .4s;
+
+    &:hover {
+      color: white;
+      border-color: white;
+
+    }
+  }
+}
+
+.fa-stop, .fa-play {
+  padding: 0 1rem;
+}
+
+.check-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15%;
+
+  .button {
+
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 0.8rem;
+    letter-spacing: 1px;
+    color: lightgrey;
+    border: 2px solid lightgrey;
+    background-color: #212121;
+    display: block;
+    border-radius: 5px 15px 15px 5px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: lowercase;
+    overflow: hidden;
+    transition: .3s;
+    width: 180px;
+
+    &:hover {
+      width: 190px;
+      color: white;
+      border: 2px solid white;
+
+    }
+  }
+}
+
+#header {
+  .tempo {
+    position: relative;
+
+    .set-tempo {
+      background-color: transparent;
+      color: lightgrey;
+      border: none;
+      top: -61%;
+      right: 0;
+      position: absolute;
+      width: 200px;
+    }
+
+    input.set-tempo {
+      background-color: #212121;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  //height: 80vh;
+}
+
+//DRUM KIT ELEMENTS
+
+.kick {
+  position: absolute;
+  background-image: url('./../images/Kick.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 53%;
+  width: 25%;
+  left: 30%;
+  bottom: 0;
+  z-index: 3;
+  transition: 0.5s;
+}
+
+.click-kick {
+  height: 55%;
+  width: 27%;
+}
+
+.hihat {
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  background-image: url('./../images/hihat.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70%;
+  width: 15%;
+  z-index: 3;
+  transition: 1s;
+
+  .keyboard-key {
+    top: 25%;
+  }
+
+}
+
+.click-hihat {
+  height: 72%;
+  width: 18%;
+}
+
+.big-tom {
+  position: absolute;
+  left: 41%;
+  bottom: 49%;
+  background-image: url('./../images/BigTom.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 26%;
+  width: 15%;
+  transition: .5s;
+
+  //border: 1px solid red;
+}
+
+.click-big-tom {
+  height: 28%;
+  width: 17%;
+}
+
+.small-tom {
+  z-index: -1;
+  position: absolute;
+  left: 9% + 20%;
+  bottom: 46%;
+  background-image: url('./../images/smallTom.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 26%;
+  width: 15%;
+  //border: 1px solid #cbad7c;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.click-small-tom {
+  height: 28%;
+  width: 15%;
+}
+
+.snare {
+  position: absolute;
+  left: 8% + 20%;
+  bottom: 2%;
+  background-image: url('./../images/Snare.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 47%;
+  width: 11%;
+  //border: 1px solid #cbad7c;
+  z-index: 4;
+  transition: 0.5s;
+}
+
+.click-snare {
+  height: 49%;
+  width: 13%;
+}
+
+.floor-tom {
+  position: absolute;
+  left: 29% + 20%;
+  bottom: 0;
+  background-image: url('./../images/FloorTom.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50%;
+  width: 11%;
+  //border: 1px solid #cbad7c;
+  z-index: 4;
+  transition: 0.5s;
+}
+
+.click-floor-tom {
+  height: 52%;
+  width: 13%;
+}
+
+
+.crash {
+  position: absolute;
+  left: 0 + 20%;
+  bottom: 0;
+  background-image: url('./../images/Crash.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 98%;
+  width: 24%;
+  //border: 1px solid #cbad7c;
+  z-index: 2;
+  transition: 0.5s;
+
+  .keyboard-key {
+    top: 18%;
+    left: 60%;
+  }
+}
+
+.click-crash {
+  height: 100%;
+  width: 26%;
+}
+
+.ride {
+  position: absolute;
+  left: 35% + 20%;
+  bottom: 0;
+  background-image: url('./../images/Ride.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 85%;
+  width: 15%;
+  transition: 0.5s;
+  //border: 1px solid #cbad7c;
+}
+
+.click-ride {
+  height: 87%;
+  width: 17%;
+}
+
+
+
+
+.keyboard-key {
+  border: 2px solid white;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  background-color: #999999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  //transition: 0.2s;
+}
+
+.press-btn {
+  background-color: #751828;
+}
+
+#footer {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 0.2rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .social-media {
+      font-size: 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0 1rem;
+
+        &:hover {
+          color: #751828;
+        }
+      }
+    }
+  }
+}
+//i {
+//  font-size: 1.1rem;
+//}
