@@ -35,7 +35,8 @@ class Bonus extends Component {
         const stopStyle = {
             backgroundColor: 'transparent',
             border: '2px solid white',
-            opacity: 0.5
+            opacity: 0.5,
+            cursor: 'pointer'
         }
         const boomStyle = {
             display: 'block',

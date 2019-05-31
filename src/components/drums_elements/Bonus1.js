@@ -35,7 +35,8 @@ class Bonus1 extends Component {
         const stopStyle = {
             backgroundColor: 'transparent',
             border: '2px solid red',
-            color:'red'
+            color:'red',
+            cursor:'pointer'
 
         }
         const boomStyle = {
