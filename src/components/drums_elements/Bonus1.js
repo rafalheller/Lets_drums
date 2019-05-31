@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import BonusSound from "../../sounds/acDc.mp3";
+import Bonus1Sound from "../../sounds/metallica.mp3";
 
-class Bonus extends Component {
+class Bonus1 extends Component {
     state = {
         bonusPlay: false,
     }
@@ -9,7 +9,7 @@ class Bonus extends Component {
     audio = null;
 
     componentDidMount() {
-        this.audio = new Audio(BonusSound)
+        this.audio = new Audio(Bonus1Sound)
     }
 
     handleBonus = () => {
@@ -34,33 +34,34 @@ class Bonus extends Component {
 
         const stopStyle = {
             backgroundColor: 'transparent',
-            border: '2px solid white',
-            opacity: 0.5
+            border: '2px solid red',
+            color:'red'
+
         }
         const boomStyle = {
             display: 'block',
             position: 'absolute',
-            left: '60%',
-            top: '30%'
+            right: '-250px',
+            top: '0'
 
         }
 
         if (!this.state.bonusPlay) {
 
-            return <div className='bonus'
+            return <div className='bonus1'
                         onClick={this.handleBonus}>
             </div>
         } else {
 
             return (<>
 
-                    <div className='bonus'
+                    <div className='bonus1'
                          style={stopStyle}
                          onClick={this.handleBonus}
                     >x
                     </div>
                     <div style={boomStyle}
-                         className=' boom animated '></div>
+                         className=' boom1 animated '></div>
 
 
                 </>
@@ -70,4 +71,4 @@ class Bonus extends Component {
     }
 }
 
-export default Bonus;
+export default Bonus1;

@@ -8,7 +8,8 @@ import FloorTom from "./FloorTom";
 import SmallTom from "./SmallTom";
 import BigTom from "./BigTom";
 import Ride from "./Ride";
-import Bonus from "./Bonus"
+import Bonus from "./Bonus";
+import Bonus1 from "./Bonus1";
 
 class Drums extends Component {
 
@@ -32,6 +33,7 @@ class Drums extends Component {
                 {toggleBigTom ? null : <BigTom toggleShowKey={this.props.toggleShowKey}/>}
                 {toggleRide ? null : <Ride toggleShowKey={this.props.toggleShowKey}/>}
                <Bonus bonusPlay={this.props.toggleBonus}/>
+               <Bonus1/>
             </div>
         );
     }
